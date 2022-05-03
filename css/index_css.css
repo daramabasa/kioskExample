@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Gms';
-  src: url('https://github.com/daramabasa/kioskExample/font/GmarketSansTTFMedium.woff');
+  src: url('/font/GmarketSansTTFMedium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'GmsB';
-  src: url('https://github.com/daramabasa/kioskExample/font/GmarketSansTTFBold.woff');
+  src: url('/font/GmarketSansTTFBold.woff') format('woff');
 }
 
 
