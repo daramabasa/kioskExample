@@ -12,7 +12,7 @@
 
     /* -- */
     .container {
-      width: 960px; height: 90vh;
+      width: 960px; height: 1000px;
       margin: 0 auto;
 
       background-color: #ccc;
@@ -21,13 +21,26 @@
 
       header {
         width: 100%; height: 15%;
+        position: relative;
 
         background-color: #ddd;
       }
-      header > nav { float: right; }
+      header > .logo {
+        position: absolute; 
+        left: 30px; top: 25px;
+      }
+      header > nav {
+        position: absolute;
+        right: 30px; top: 50px;
+      }
+
         header > nav li {
+          width: 100px; height: 50px;
+          margin: 0; padding: 0;
           float: left;
           display: block;
+
+          background-color: aqua;
 
           cursor: pointer;
         }
@@ -35,11 +48,25 @@
     main {
       width: 100%; height: 70%;
       background-color: #eee;
+
+      position: relative;
+    }
+
+    #tabMenu {
+       position: absolute;
+       left: 3%; top: 3%;
+
+       width: 60%; height: 50%;
     }
 
       #tabMenu > label {
+        width: 144px; height: 70px;
         float: left;
         display: block;
+
+        font-size: 40px;
+        line-height: 70px;
+        text-align: center;
 
         box-sizing: border-box;
         border: 1px solid black;
@@ -61,14 +88,20 @@
 
         #tabMenu .tabItems {
           clear: left;
-          width: 35em; height: 25em;
+          width: 100%; height: 100%;
           background-color: #bbb;
         }
 
     aside {
-      width: 20em; height: 25em;
-      float: right;
+      width: 30%; height: 53%;
+
+      position: absolute;
+      right: 3%; top: 10%;
       background-color: #bbb;
+    }
+
+    footer {
+      text-align: center;
     }
 
   </style>
@@ -98,9 +131,15 @@
         <input type="radio" name="menu" id="sidemenu">
         <label for="sidemenu">사이드</label>
 
-        <div class="tabItems">a</div>
-        <div class="tabItems">b</div>
-        <div class="tabItems">c</div>
+        <div class="tabItems">
+
+        </div>
+        <div class="tabItems">
+
+        </div>
+        <div class="tabItems">
+          
+        </div>
       </section>
       <aside></aside>
     </main>
