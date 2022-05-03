@@ -3,8 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <title>키오스크</title>
+
+  <style>
+    /* 초기화 */
+    * { margin: 0; padding: 0; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+
+    /* -- */
+    .container {
+      width: 960px; height: 90vh;
+      margin: 0 auto;
+
+      background-color: #ccc;
+    }
+
+
+      header {
+        width: 100%; height: 15%;
+
+        background-color: #ddd;
+      }
+      header > nav { float: right; }
+        header > nav li {
+          float: left;
+          display: block;
+
+          cursor: pointer;
+        }
+
+    main {
+      width: 100%; height: 70%;
+      background-color: #eee;
+    }
+
+      #tabMenu > label {
+        float: left;
+        display: block;
+
+        box-sizing: border-box;
+        border: 1px solid black;
+
+        cursor: pointer;
+      }
+
+      #tabMenu input:nth-of-type(1) {display: none;}
+      #tabMenu input:nth-of-type(1) ~ div:nth-of-type(1) {display: none;}
+      #tabMenu input:nth-of-type(1):checked ~ div:nth-of-type(1) {display: block;}
+      
+      #tabMenu input:nth-of-type(2) {display: none;}
+      #tabMenu input:nth-of-type(2) ~ div:nth-of-type(2) {display: none;}
+      #tabMenu input:nth-of-type(2):checked ~ div:nth-of-type(2) {display: block;}
+      
+      #tabMenu input:nth-of-type(3) {display: none;}
+      #tabMenu input:nth-of-type(3) ~ div:nth-of-type(3) {display: none;}
+      #tabMenu input:nth-of-type(3):checked ~ div:nth-of-type(3) {display: block;}
+
+        #tabMenu .tabItems {
+          clear: left;
+          width: 35em; height: 25em;
+          background-color: #bbb;
+        }
+
+    aside {
+      width: 20em; height: 25em;
+      float: right;
+      background-color: #bbb;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="https://via.placeholder.com/200x100" alt="logo" id="headerLogo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li>한국어</li>
+          <li>ENG</li>
+          <li>日本語</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="tabMenu">
+        <input type="radio" name="menu" id="burger">
+        <label for="burger">버거</label>
+        <input type="radio" name="menu" id="drink">
+        <label for="drink">음료</label>
+        <input type="radio" name="menu" id="sidemenu">
+        <label for="sidemenu">사이드</label>
+
+        <div class="tabItems">a</div>
+        <div class="tabItems">b</div>
+        <div class="tabItems">c</div>
+      </section>
+      <aside></aside>
+    </main>
+    <footer>
+      <h4>
+        COPYRIGHT. 2022. 서혜원
+      </h4>
+    </footer>
+  </div>
 </body>
 </html>
