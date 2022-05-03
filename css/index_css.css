@@ -17,7 +17,7 @@ ul { list-style: none; }
 /* -- */
 .container {
   width: 960px; height: 900px;
-  margin: 0 auto;
+  margin: 0 auto; padding: 0;
 
   background-color: #ccc;
 }
@@ -38,6 +38,29 @@ ul { list-style: none; }
     position: absolute;
     right: 30px; top: 50px;
   }
+    #reactNav {
+      display: none;
+    }
+      #reactNav > select {
+        width: 150px; height: 50px;
+        margin-right: 20px;
+
+        text-align: center;
+        font-family: 'GmsB';
+        font-size: 25px;
+        
+        background-color: #EA0D44; color: white;
+        border: 2px solid white;
+        border-radius: 15px;
+
+        -o-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+        #reactNav > select::-ms-expand { 
+          display: none;
+        }
 
     header > nav li {
       width: 100px; height: 50px;
@@ -68,17 +91,17 @@ ul { list-style: none; }
       }
 
 main {
-  width: 100%; height: 78%;
+  width: 100%; height: 79%;
   background-color: white;
 
-  position: relative;
+  clear: both;
 }
 
 #tabMenu {
-   position: absolute;
-   left: 3%; top: 3%;
+  width: 60%; height: 650px;
+  float: left;
 
-   width: 60%; height: 650px;
+  margin: 3%;
 }
 
   #tabMenu > label {
@@ -158,18 +181,22 @@ main {
 aside {
   width: 30%; height: 550px;
 
-  position: absolute;
-  right: 3%; top: 15%;
+  float: right;
+  margin: 15% 3% 0 0;
+
+  position: relative;
 
   background-color: white;
 
   font-family: 'GmsB';
-  font-size: 15px;
+  font-size: 14px;
   color: #323232;
 }
   aside .shopcart {
     width: 100%; height: 430px;
-    box-sizing: border-box;
+    padding-top: 10px;
+
+    background-color: #eee;
 
     overflow: scroll;
     scrollbar-width: none;
@@ -184,13 +211,14 @@ aside {
 
         position: relative;
       } 
-      .menuList .menu { position: absolute; left: 0;}
-      .menuList .amount { position: absolute; right: 150px;}
-      .menuList .price { position: absolute; right: 30px;}
-      .menuList button { width: 25px; position: absolute; right: 0; }  
+      .menuList .menu { position: absolute; left: 5px;}
+      .menuList .amount { position: absolute; right: 110px;}
+      .menuList .price { position: absolute; right: 35px;}
+      .menuList button { width: 25px; position: absolute; right: 5px; }  
 
   aside .resultInfo{
     width: 100%; height: 50px;
+    line-height: 50px;
     position: absolute;
     bottom: 50px;
   }
@@ -209,10 +237,57 @@ aside {
   }
 
 footer {
-  width: 100%; height: 5%;
+  clear: both;
+  width: 100%; height: 4%;
+
   text-align: center;
   background-color: white;
 }
   footer > h4 {
-    line-height: 45px;
+    line-height: 36px;
   } 
+
+
+
+@media screen and (max-width: 768px) {
+  .container { width: 768px; height: auto; padding: 0;}
+  header { height: 153px; }
+    header nav { display: none; }
+    #reactNav { display: block; }
+
+  main { width: 100%; height: auto; padding-top: 3%;}
+    #tabMenu {
+      float: none; width: 75%;
+      margin: 0 auto; }
+    aside {
+      float: none;
+      width: 90%; height: 35%;
+      margin: 0 auto;
+      padding: 15px 0 ; 
+    }
+      aside .shopcart {
+        width: 100%; height: 200px;
+      }
+        .menuList > .menu {
+          left: 30px;
+        }
+        .menuList > .amount {
+          right: 200px;
+        }
+        .menuList > .price {
+          right: 70px;
+        }
+        .menuList button { right: 30px; }  
+
+      aside .resultInfo {
+        position: static;
+        width: 100%; height: 50px;
+        padding: 0; margin: 0;
+      }
+      aside > button {
+        width: 100%; height: 50px;
+        position: static;
+        margin: 0; padding: 0; 
+        display: block;
+      }
+}
