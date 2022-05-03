@@ -249,7 +249,7 @@ footer {
 
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .container { width: 768px; height: auto; padding: 0;}
   header { height: 153px; }
     header nav { display: none; }
@@ -290,4 +290,66 @@ footer {
         margin: 0; padding: 0; 
         display: block;
       }
+}
+
+
+@media (max-width: 481px) {
+  .container { width: 481px; height: auto; padding: 0;}
+  header { height: 153px; }
+    header nav { display: none; }
+    #reactNav { display: block; }
+
+  main { width: 100%; height: auto; padding-top: 3%;}
+    #tabMenu {
+      float: none;
+      width: 75%; height: 100%;
+      margin: 0 auto;
+    }
+
+      #tabMenu > label {
+        width: 100px; height: 50px;
+        font-size: 30px; line-height: 50px;
+      }
+
+      #tabMenu .tabItems{
+        height: 500px;
+        padding: 30px 5px;
+      }
+        .tabItems .items {
+          width: 100px; height: 80px;
+          font-size: 10px;
+          margin: 30px 5px;
+        }
+    aside {
+      float: none;
+      width: 90%; height: 35%;
+      margin: 0 auto;
+      padding: 15px 0 ; 
+    }
+      aside .shopcart {
+        width: 100%; height: 150px;
+      }
+        .menuList > .menu {
+          left: 30px;
+        }
+        .menuList > .amount {
+          right: 200px;
+        }
+        .menuList > .price {
+          right: 70px;
+        }
+        .menuList button { right: 30px; }  
+
+      aside .resultInfo {
+        position: static;
+        width: 100%; height: 50px;
+        padding: 0; margin: 0;
+      }
+      aside > button {
+        width: 100%; height: 50px;
+        position: static;
+        margin: 0; padding: 0; 
+        display: block;
+      }
+
 }
